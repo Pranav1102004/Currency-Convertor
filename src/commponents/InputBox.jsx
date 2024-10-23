@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useId} from "react";
 
 
 function InputBox({
@@ -14,15 +14,15 @@ function InputBox({
     className = "",
 }) {
    
-
+    const ammoutInputId = useId() //give the unique id but don't use it as key to iterate a list
     return (
         <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
             <div className="w-1/2">
-                <label  className="text-black/40 mb-2 inline-block">
+                <label htmlFor= {ammoutInputId} className="text-black/40 mb-2 inline-block">
                     {label}
                 </label>
                 <input
-                    
+                    id={ammoutInputId}
                     className="outline-none w-full bg-transparent py-1.5"
                     type="number"
                     placeholder="Amount"
