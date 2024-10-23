@@ -28,7 +28,7 @@ function InputBox({
                     placeholder="Amount"
                     disabled = {ammountDisable}
                     value={ammonut}
-                    onChange={(e)=>onAmmonutChange && onAmmonutChange(Number(e.target.value))}
+                    onChange={(e)=>onAmmonutChange(Number(e.target.value))}
                 />
             </div>
             <div className="w-1/2 flex flex-wrap justify-end text-right">
